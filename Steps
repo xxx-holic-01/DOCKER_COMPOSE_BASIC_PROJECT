@@ -1,0 +1,31 @@
+====================
+Step-1
+======
+Run following commands 
+--> docker build -t dikshahits/visits:latest .
+this will build a images with tag 'dikshahits/visits'
+================================
+-->docker run dikshahits/visits
+this will run a container 
+---------------------------
+
+here you will get the connection error so we will run redis container as well...
+--> docker run redis 
+
+
+still you will get same connection saying 
+-----------------------------------------------------
+so whats happening here is we have two containers 
+- node app 
+- redis 
+they both are runing in two seperate containers 
+-----------------------------------------------------
+
+We have two options -
+to set up networking stuff btw containers using docker build in featers 
+=============================
+ SO WE USE DOCKER COMPOSE
+=============================
+write commands in dockercompose.yml file and feed it to docker compose cli then docker compose by itself will build up the networking between container.
+===============================
+

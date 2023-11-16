@@ -1,0 +1,11 @@
+version: '3'
+services:
+  redis-server:
+    image: 'redis'
+  node-app:
+    restart: on-failure
+    build: .
+    ports:
+      - "4001:8081"
+#first one is port on your machine 
+#second one is port inside trhe container
